@@ -30,6 +30,27 @@ html {
   color: darkgreen;
 }
 
+.progress {
+  width:500px;
+}
+
+.badge {
+  margin-left: 10px;
+}
+
+.navbar-dark {
+  background-color: darkseagreen;
+  color: white;
+}
+
+.navbar-light {
+  background-color: #e3f2fd;
+}
+
+.navbar-none {
+  color: darkgrey;
+}
+
   .footer {
     position: absolute;
     bottom: 0;

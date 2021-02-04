@@ -11,12 +11,17 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     <body>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" id="data">
             <li class="nav-item">
                 <a class="nav-link active" id="all" href="#" onclick="dataSet()">Home</a>
             </li>
+
+
             <li class="nav-item">
-                <a class="nav-link" id="jirka" href="#" onclick="dataSet('jirka')">Jirka</a>
+                <a class="nav-link" id="jirka" href="#" onclick="dataSet('jirka')"><span class="name"></span><span class="badge badge-pill badge-primary">0</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="martin" href="#" onclick="dataSet('martin')"><span class="name"></span><span class="badge badge-pill badge-primary">0</span></a>
             </li>
         </ul>
         <div class="container" id="main">

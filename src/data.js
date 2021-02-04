@@ -4,12 +4,12 @@ const entry = (heading, body, target) =>{
     }
 }
 
-const DATA ={}
+const DATA ={};
 DATA.JIRKA = {
     "name": "Jirka",
     "achievements": {
         "PERSPECTIVE": {
-            "done": 0,
+            "50Box": {"done":0},
         },
         "MATERIALS": {
             "MUD": {"done": 1},
@@ -20,12 +20,29 @@ DATA.JIRKA = {
     }
 }
 
-const ACHIEVEMENTS = {
+DATA.MARTIN = {
+    "name": "Martin",
+    "achievements": {
+        "PERSPECTIVE": {
+            "50Box": {"done":0},
+        },
+        "MATERIALS": {
+            "MUD": {"done": 1},
+        },
+        "CHARACTER_DESIGN": {
+            "50Soldiers": {"done":50},
+            "50MedievalMen":{"done":50},
+            "50MedievalWomen":{"done":25}
+        }
+    }
+}
+
+const LESSONS = {
     "ANATOMY": {
         "heading": "Anatomie",
         "body": {
-            "ANATOMY_1": entry("anatomie 1", "lalala"),
-            "ANATOMY_2": entry("anatomie 2", "lalala"),
+            "ANATOMY_1": entry("anatomie 1", "lalala", 1),
+            "ANATOMY_2": entry("anatomie 2", "lalala", 1),
         }
     },
     "MATERIALS": {
@@ -36,7 +53,7 @@ const ACHIEVEMENTS = {
         }
     },
     "PERSPECTIVE": {
-        "heading": "Perspectiva",
+        "heading": "Perspektiva",
         "body": {
             "50Box": entry("Bahno", "Nakresli 50 krabic", 50),
             "50Cylinder": entry("Rez", "Nakresli 50 valcu", 50),
