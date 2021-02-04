@@ -36,6 +36,7 @@ html {
 
 .badge {
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .navbar-dark {
@@ -48,6 +49,10 @@ html {
 }
 
 .navbar-none {
+  color: darkgrey;
+}
+
+.sub-text {
   color: darkgrey;
 }
 

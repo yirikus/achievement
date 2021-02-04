@@ -1,6 +1,6 @@
-const entry = (heading, body, target) =>{
+const entry = (heading, body, target, value) =>{
     return {
-        heading, body, target
+        heading, body, target, value
     }
 }
 
@@ -8,6 +8,9 @@ const DATA ={};
 DATA.JIRKA = {
     "name": "Jirka",
     "achievements": {
+        "FIGURE": {
+           "proko_2": {"done":100, "date": "21.4.2019"}
+        },
         "PERSPECTIVE": {
             "50Box": {"done":0},
         },
@@ -38,6 +41,12 @@ DATA.MARTIN = {
 }
 
 const LESSONS = {
+    "FIGURE": {
+      "heading":"Figurální kresba",
+      "body": {
+          "proko_2": entry("Proko 2 - Fazole", CONTENT.proko2bean, 100, 0.5),
+      }
+    },
     "ANATOMY": {
         "heading": "Anatomie",
         "body": {

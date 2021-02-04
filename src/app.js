@@ -17,11 +17,17 @@ const navItems = () => {
 
     for (let entry in DATA) {
         html += '<li class="nav-item"><a class="nav-link" id="' + entry + '" href="#" onclick="dataSet(\''+entry+'\')">' +
-            '<span class="name">' + DATA[entry].name + '</span>' +
-            '<span class="badge badge-pill badge-primary">' + points(DATA[entry]) + '</span></a></li>'
+            '<span class="name">' + DATA[entry].name + '</span>' + badge(points(DATA[entry])) + '</a></li>'
     }
 
     return html;
+}
+
+const badge = (data, styleClass) => {
+    if (!styleClass) {
+        styleClass = 'badge-primary';
+    }
+    return  '<span class="badge badge-pill ' + styleClass + '">' + data + '</span>';
 }
 
 const points = (userData) => {
@@ -98,7 +104,11 @@ const achievement = (lesson, data) => {
     } else if (data && data.done > 0) {
          statusClass = 'navbar-light';
      }
-    return '<nav class="navbar ' + statusClass + '">' + lesson. heading + progressBar(lesson.target, (data && data.done) || 0) + '</nav>'
+    return '<nav class="navbar ' + statusClass + '"><div>'
+        + badge(data && data.done? data.done * (lesson.value || 10)  : 0, 'badge-secondary')
+        + '<span class="name">' + lesson. heading + '</span> <span class="sub-text">' + (data && data.date ? data.date : '') + '</span>'
+        + '</div>'
+        + progressBar(lesson.target, (data && data.done) || 0) + '</nav>'
 }
 
 const progressBar = (target, done) => {
