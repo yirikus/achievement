@@ -1,15 +1,23 @@
-const entry = (heading, body) =>{
+const entry = (heading, body, target) =>{
     return {
-        heading, body
+        heading, body, target
     }
 }
 
-const DATA = {
+const DATA ={}
+DATA.JIRKA = {
     "name": "Jirka",
     "achievements": {
-
-    },
-    '#50hands': 50,
+        "PERSPECTIVE": {
+            "done": 0,
+        },
+        "MATERIALS": {
+            "MUD": {"done": 1},
+        },
+        "CHARACTER_DESIGN": {
+            "50Soldiers": {"done":4}
+        }
+    }
 }
 
 const ACHIEVEMENTS = {
@@ -20,14 +28,33 @@ const ACHIEVEMENTS = {
             "ANATOMY_2": entry("anatomie 2", "lalala"),
         }
     },
+    "MATERIALS": {
+        "heading": "Studie materiálů",
+        "body": {
+            "MUD": entry("Bahno", "Nakresli 10x studie bahna", 10),
+            "RUST": entry("Rez", "Nakresli 10x studie rezu", 10),
+        }
+    },
     "PERSPECTIVE": {
-        "heading": "Perspectiva"
-
+        "heading": "Perspectiva",
+        "body": {
+            "50Box": entry("Bahno", "Nakresli 50 krabic", 50),
+            "50Cylinder": entry("Rez", "Nakresli 50 valcu", 50),
+        }
     },
-    "FORM": {
-        "heading": "Forma"
+    "CHARACTER_DESIGN": {
+        "heading": "Postavy",
+        "body": {
+            "50Soldiers": entry("Současná armáda", "Nakresli 50 příslušníků moderní armády", 50),
+            "50MedievalMen": entry("Středověk - muži", "Nakresli 50 studií mužů ve středověkém kostýmu", 50),
+            "50MedievalWomen": entry("Středověk - ženy", "Nakresli 50 studií žen ve středověkém kostýmu", 50),
+        }
     },
-    "LIGHT":{
-        "heading": "light"
+    "CREATURE_DESIGN":{
+        "heading": "Bytosti",
+        "body": {
+            "50Box": entry("Bahno", "Nakresli 50 krabic", 50),
+            "50Cylinder": entry("Rez", "Nakresli 50 valcu", 50),
+        }
     }
 };
